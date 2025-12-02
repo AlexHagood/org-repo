@@ -166,6 +166,20 @@ export const Articles: CollectionConfig = {
             }),
           ],
         },
+        {
+          label: 'Comments',
+          fields: [
+            {
+              name: 'commentsUI',
+              type: 'ui',
+              admin: {
+                components: {
+                  Field: '@/collections/Articles/components/CommentsTab',
+                },
+              },
+            },
+          ],
+        },
       ],
     },
     {
@@ -200,6 +214,15 @@ export const Articles: CollectionConfig = {
       },
       hasMany: true,
       relationTo: 'users',
+    },
+    {
+      name: 'commentsEnabled',
+      type: 'checkbox',
+      defaultValue: true,
+      admin: {
+        position: 'sidebar',
+        description: 'Enable or disable comments for this article',
+      },
     },
     {
       name: 'createdBy',
