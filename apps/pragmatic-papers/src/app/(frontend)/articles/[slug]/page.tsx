@@ -89,7 +89,7 @@ export default async function Article({ params: paramsPromise }: Args): Promise<
   }
 
   return (
-    <article className="pb-16 max-w-3xl m-auto p-5">
+    <article className="m-auto max-w-3xl p-5 pb-16">
       <PageClient />
 
       {/* Allows redirects for valid pages too */}
